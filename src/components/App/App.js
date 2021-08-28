@@ -21,9 +21,12 @@ const App = () => {
 const Main = styled.main`
   padding: 64px 32px;
 
+  @media ${QUERIES.tabletAndSmaller} {
+    padding: 48px 32px;
+  }
+  
   @media ${QUERIES.phoneAndSmaller} {
-    padding-inline-start: 16px;
-    padding-inline-end: 16px;
+    padding: 48px 16px;
   }
 `;
 
