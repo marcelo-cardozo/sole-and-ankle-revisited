@@ -62,6 +62,7 @@ const MainHeader = styled.div`
   @media ${QUERIES.tabletAndSmaller} {
     border-top: 4px solid ${COLORS.gray[900]};
     padding-inline-end: 29px;
+    align-items: center;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
