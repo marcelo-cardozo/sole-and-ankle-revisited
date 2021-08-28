@@ -15,7 +15,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
   }
 
   return (
-    <div>
+    <Wrapper>
       <button onClick={onDismiss}>Dismiss menu</button>
       <nav>
         <a href="/sale">Sale</a>
@@ -30,8 +30,16 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
         <a href="/privacy">Privacy Policy</a>
         <a href="/contact">Contact Us</a>
       </footer>
-    </div>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  display: none;
+  
+  @media ${QUERIES.tabletAndSmaller} {
+    display: revert;
+  }
+`
 
 export default MobileMenu;
