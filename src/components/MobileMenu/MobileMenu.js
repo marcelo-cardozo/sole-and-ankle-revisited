@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import {COLORS, WEIGHTS} from '../../constants';
-
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
@@ -13,7 +11,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
     <Overlay isOpen={isOpen} onDismiss={onDismiss}>
       <Content>
         <CloseButton onClick={onDismiss}>
-          <Icon id="close" strokeWidth={1} color={COLORS.gray[900]} />
+          <Icon id="close" strokeWidth={1} color={'var(--color-gray-900)'} />
           <VisuallyHidden>Dismiss menu</VisuallyHidden>
         </CloseButton>
         <Spacer />
@@ -41,13 +39,13 @@ const Overlay = styled(DialogOverlay)`
   left: 0;
   bottom: 0;
   right: 0;
-  background: hsla(220, 5%, 40%, 0.8);
+  background: var(--color-backdrop);
 `
 
 const Content = styled(DialogContent)`
   display: flex;
   flex-direction: column;
-  background: ${COLORS.white};
+  background: var(--color-white);
   margin-left: max(75px, 20%);
   height: 100%;
   
@@ -71,11 +69,11 @@ const NavLink = styled.a`
   font-size: ${18/16}rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
-  font-weight: ${WEIGHTS.medium};
+  color: var(--color-gray-900);
+  font-weight: var(--font-weight-medium);
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
@@ -94,8 +92,8 @@ const Footer = styled.footer`
 const FooterLink = styled.a`
   font-size: ${14/16}rem;
   text-decoration: none;
-  color: ${COLORS.gray[700]};
-  font-weight: ${WEIGHTS.normal};
+  color: var(--color-gray-700);
+  font-weight: var(--font-weight-normal);
 `;
 
 export default MobileMenu;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import {COLORS, QUERIES, WEIGHTS} from '../../constants';
+import {QUERIES} from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
@@ -29,15 +29,15 @@ const Header = () => {
         </DesktopNav>
         <MobileActions>
           <UnstyledButton>
-            <Icon id="shopping-bag" strokeWidth={1} color={COLORS.gray[900]} />
+            <Icon id="shopping-bag" strokeWidth={1} color={'var(--color-gray-900)'} />
             <VisuallyHidden>Open Cart</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton>
-            <Icon id="search" strokeWidth={1} color={COLORS.gray[900]} />
+            <Icon id="search" strokeWidth={1} color={'var(--color-gray-900)'} />
             <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
           <UnstyledButton onClick={() => setShowMobileMenu(true)}>
-            <Icon id="menu" strokeWidth={1} color={COLORS.gray[900]} />
+            <Icon id="menu" strokeWidth={1} color={'var(--color-gray-900)'} />
             <VisuallyHidden>Open Menu</VisuallyHidden>
           </UnstyledButton>
         </MobileActions>
@@ -56,11 +56,11 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--color-gray-300);
   overflow-x: auto;
 
   @media ${QUERIES.tabletAndSmaller} {
-    border-top: 4px solid ${COLORS.gray[900]};
+    border-top: 4px solid var(--color-gray-900);
     padding-inline-end: 29px;
     align-items: center;
   }
@@ -116,12 +116,12 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
-  font-weight: ${WEIGHTS.medium};
+  color: var(--color-gray-900);
+  font-weight: var(--font-weight-medium);
 
   min-width: max-content;
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
